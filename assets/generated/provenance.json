@@ -1,0 +1,34 @@
+{
+  "generated_with": "OpenAI built-in image_gen",
+  "date": "2026-10-13",
+  "source": "beaver-natural-source.png",
+  "source_sha256": "2c623f9b5a3a2114ddf96ad6ce2e1a1f4026e744642f4e9cddd53a111c048eb6",
+  "prompt": "beaver-prompt.txt",
+  "source_mode": "RGBA",
+  "source_dimensions": [
+    1704,
+    923
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "crop": [
+    38,
+    158,
+    1657,
+    783
+  ],
+  "derivation": "tools/reduce_beaver.py: alpha bounding crop, aspect-preserving Lanczos reduction, 15 RGB colors, transparent index 0. Original full alpha remains in source PNG.",
+  "external_image_inputs": [],
+  "sprites": [
+    [
+      50,
+      19
+    ],
+    [
+      29,
+      11
+    ]
+  ]
+}

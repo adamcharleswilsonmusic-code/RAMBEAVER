@@ -1,0 +1,17 @@
+{
+  "checked_date": "2026-10-17",
+  "source_code_conflicting_license_or_unattributed_copy_identified": false,
+  "scope": "Active build745 source and staged release inputs against retained pinned upstream evidence; not a blanket legality guarantee.",
+  "gpl_license_retained": true,
+  "foundation_author_notices_retained": true,
+  "dsp_notices_retained": true,
+  "font_notices_retained": true,
+  "browser_runtime_notices_retained": true,
+  "sdk_input_count": 3,
+  "sdk_commit": "d179b4484759423312073f5fbb232501aa491047",
+  "sdk_nested_license_check": "No additional license/notice in ancestry of cpu/wl82/tools/{uboot.boot,cfg_tool.bin,cfg/eq_cfg_hw.bin}; unrelated SDK subtree notices do not apply to included source.",
+  "sdk_limit": "Opaque inputs; root Apache-2.0 and pinned upstream attribution checked, internals not independently audited.",
+  "song_and_voice_publication_authority": "Owner identified original song as their own, supplied their own voices, and explicitly requested public game release. Existing session authorization retained.",
+  "generated_image_provenance_retained": true,
+  "new_external_code_or_assets_added": false
+}

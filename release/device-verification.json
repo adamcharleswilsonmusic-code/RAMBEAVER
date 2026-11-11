@@ -1,0 +1,45 @@
+{
+  "revision": "FM-1_745",
+  "verified_utc": "2026-10-17T15:27:21.380341+00:00",
+  "installed_identity_verified": true,
+  "identity_samples": [
+    {
+      "elapsed_s": 0,
+      "identity": "FM-1_745",
+      "port": "Felucca",
+      "reply_ms": 383.12
+    },
+    {
+      "elapsed_s": 10,
+      "identity": "FM-1_745",
+      "port": "Felucca",
+      "reply_ms": 322.32
+    },
+    {
+      "elapsed_s": 20,
+      "identity": "FM-1_745",
+      "port": "Felucca",
+      "reply_ms": 309.32
+    },
+    {
+      "elapsed_s": 30,
+      "identity": "FM-1_745",
+      "port": "Felucca",
+      "reply_ms": 312.0
+    }
+  ],
+  "usb_audio_enumeration": true,
+  "capture_check": {
+    "actual_device_frames": 141,
+    "video_tracks": 1,
+    "audio_tracks": 1,
+    "audio_samples": 202240,
+    "audio_dropped_buffers": 0,
+    "corrupt_frames": 0,
+    "audio_xruns_added": 0,
+    "midi_output_commands": 0,
+    "gameplay_commands_sent": 0,
+    "save_commands_sent": 0
+  },
+  "scope": "Original device verification for745. Release preparation rebuilt source and tools without accessing or changing the device."
+}

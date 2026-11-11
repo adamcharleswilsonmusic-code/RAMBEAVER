@@ -1,0 +1,13 @@
+{
+  "version_directory": "jieli-linux-toolchains-20260730.1",
+  "executables": {
+    "pi32v2/bin/clang": "c45189ee624de0430deb0db02e6dce171fb5538e7fe323e3964dc8ac6236240f",
+    "pi32v2/bin/ld": "fd61aff15616bb6f6b58fd2e9ede7af741c7bf05facb3e0cb3d3c9817c268fd9",
+    "common/bin/objcopy": "295151226e28891115c97262e6460a06fe67fc0753858e0df3234eb000ea6e66",
+    "common/bin/objdump": "f7e449e2c8001d5ed4493a45d1f5f304c8910418e4074acdc8715079ef64e08a"
+  },
+  "docker_image": "debian:bookworm-slim@sha256:7c7b2c966bc9ee8cedfeef67e0e279108992c77681fa595db4a9d65c06ccc587",
+  "emscripten": "4.0.23",
+  "sdk_commit": "d179b4484759423312073f5fbb232501aa491047",
+  "compiler_binaries_included": false
+}

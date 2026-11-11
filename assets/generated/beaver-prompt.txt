@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: original naturalistic side-profile beaver cutout for reduction to a tiny 48 by 26 pixel side-scrolling game sprite.
+Primary request: one ordinary real North American brown beaver standing low on all four short legs, exact true side profile facing RIGHT. Natural rounded elongated heavy body, small dark eye, small round ear, blunt furry muzzle with only a tiny glimpse of incisors, realistic brown coarse fur. A long broad flattened dark textured paddle tail trails to the LEFT and rests near the same ground plane. All body, paws and tail fully visible in frame. Forepaws grounded and readable, no held objects.
+Scene/backdrop: genuinely transparent alpha background, isolated animal, no shadow or scenery.
+Style/medium: naturalistic wildlife studio photograph with clear restrained contour and coherent warm brown tonal masses; realistic anatomy, never a cartoon or mascot. Even soft neutral lighting, moderate contrast for readability after downscaling.
+Composition/framing: horizontal landscape composition, entire beaver with generous transparent padding. Camera perfectly side-on at the animal's shoulder height, no perspective turn toward viewer. Foot soles share a clear horizontal baseline.
+Constraints: exactly one animal. No text, logo, watermark, border, costume, gun, human torso, muscles, smile, giant eyes, raccoon markings, upright pose, white belly, decorative glow, or background checkerboard.

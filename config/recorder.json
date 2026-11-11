@@ -1,0 +1,5 @@
+{
+  "revision": 745,
+  "state_bytes": 5016,
+  "renderer": "dist/browser/omni.wasm"
+}

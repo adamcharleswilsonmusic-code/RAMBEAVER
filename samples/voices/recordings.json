@@ -1,0 +1,116 @@
+{
+  "runtime_mapping": {
+    "0": "First visible alert/acquisition per ordinary robot; shared3s robot cooldown.",
+    "1": "Later attack windup; shared3s robot cooldown.",
+    "2": "Every successful Molotov throw; queued behind higher-priority speech, never empty/held-repeat/gun.",
+    "3": "Actual ground or motorcycle takeoff; not key-hold or jetpack thrust.",
+    "4": "Actual damage including fatal damage, after panic cleanup.",
+    "5": "Only successful one-use health-log consumption, not full-health contact or bottle pickups.",
+    "6": "Every sixth ordinary robot kill; persistent counter, simultaneous/active reactions coalesced; no ending or party line.",
+    "7": "Successful posse summon only, replacing its synth whistle."
+  },
+  "recorded_by": "Project-owner supplied voice recordings",
+  "originals_unchanged": true,
+  "processing": "Anti-aliased48k\u21928k scipy resample_poly, Kaiser8.6; DC removal, gentle2:1 peak compression2ms/60ms, normalized peak94/128,4ms in/8ms out fades; all source duration retained, no word truncation.",
+  "total_bytes": 47532,
+  "limit_bytes": 48000,
+  "remaining_bytes": 468,
+  "clips": [
+    {
+      "slot": 0,
+      "source_file": "beaver detected.wav",
+      "source_sha256": "ed949cafc7c2a3525f29c78ed20694f0d5b3abf4eaeb8972d84cad9bd7097c0d",
+      "source_frames": 31500,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "robot-acquire",
+      "limit_seconds": 0.8,
+      "bytes": 5250,
+      "seconds": 0.65625,
+      "pcm_sha256": "f109a7611ec1e95fd40c4c8a5cc09c1e1d616ac1171f84ca5e4e8eac7aecaa35"
+    },
+    {
+      "slot": 1,
+      "source_file": "stop that beaver.wav",
+      "source_sha256": "0d6d26d34f9d6cf8d61206dd430b0df275c357b8d2af26df6df192d31672e25c",
+      "source_frames": 35250,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "robot-windup",
+      "limit_seconds": 0.9,
+      "bytes": 5875,
+      "seconds": 0.734375,
+      "pcm_sha256": "af78507e71724d36d811a7aae676b194131e52519014baf5b2cf727d2fea7ebe"
+    },
+    {
+      "slot": 2,
+      "source_file": "chew on this.wav",
+      "source_sha256": "b0cb746bed4a581d6cdc08c7b80117009166f6c87a15d8dc21b5372335259c02",
+      "source_frames": 42188,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "successful-molotov",
+      "limit_seconds": 1.0,
+      "bytes": 7032,
+      "seconds": 0.879,
+      "pcm_sha256": "e4ad96981763724f48c5de5ea3f8303a5fbd981bc61bad5669c1e9c4b1920580"
+    },
+    {
+      "slot": 3,
+      "source_file": "beaver jump.wav",
+      "source_sha256": "9955f8ae08f0f9e7d50c1feaf7ff95d8467318a063817df53a60b9594ec05a73",
+      "source_frames": 9750,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "real-jump",
+      "limit_seconds": 0.25,
+      "bytes": 1625,
+      "seconds": 0.203125,
+      "pcm_sha256": "3b1f31e2f9a272391033ea11883309f29bb644f71532b5ebcdb9ff27b8aff413"
+    },
+    {
+      "slot": 4,
+      "source_file": "beaver hurt.wav",
+      "source_sha256": "c58e2fa5374803eb4a884c675dede58c9d23396e60f9737e3f1fb04a0f155d1b",
+      "source_frames": 25500,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "actual-damage",
+      "limit_seconds": 0.6,
+      "bytes": 4250,
+      "seconds": 0.53125,
+      "pcm_sha256": "db84c444ec7b892e7d6d2fe5b43a9a5d4feb0ba8896877247d6c459e88aae5ae"
+    },
+    {
+      "slot": 5,
+      "source_file": "beaver log.wav",
+      "source_sha256": "770a013fce38f7013b5a4be4b48726a8f7bf62272cf268aebef6f8323fa3f3ca",
+      "source_frames": 42000,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "successful-health-log",
+      "limit_seconds": 0.95,
+      "bytes": 7000,
+      "seconds": 0.875,
+      "pcm_sha256": "573d061d4de5bd8211f73066a3bc14461e3d27b041cfabdb3d516b82292d8871"
+    },
+    {
+      "slot": 6,
+      "source_file": "witness me.wav",
+      "source_sha256": "b4a1f3bfa73ede8cc45aa747d432089e3fe5405c4904aec7e26fdc814484ca21",
+      "source_frames": 48000,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "fourth-robot-kill",
+      "limit_seconds": 1.0,
+      "bytes": 8000,
+      "seconds": 1.0,
+      "pcm_sha256": "725436672f4eef185c88669a5f324d6cc9bb909b0592a25ae815c425ed84b63e"
+    },
+    {
+      "slot": 7,
+      "source_file": "beavers essemble.wav",
+      "source_sha256": "2cede7b9af6be9d245df86d4836ae196f827c2858099fe68aba16d5ea5c9fc68",
+      "source_frames": 51000,
+      "source_format": "mono48000Hz24bitPCM",
+      "cue": "successful-posse-replaces-whistle",
+      "limit_seconds": 1.15,
+      "bytes": 8500,
+      "seconds": 1.0625,
+      "pcm_sha256": "c747f8fd18d433cbaff87405edef3a56602f3c794a0ff9feb2057583468bbf08"
+    }
+  ]
+}

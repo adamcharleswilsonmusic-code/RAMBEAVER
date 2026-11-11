@@ -1,0 +1,9 @@
+{
+  "what": "A side-scrolling action game with synthesized music, sound effects and character voices. Defend the dam, ride through robot city, fly to the data center and stop Mother.",
+  "author": "Trust This Mechanism",
+  "kinds": [
+    "other"
+  ],
+  "cheat": "https://github.com/adamcharleswilsonmusic-code/RAMBEAVER/releases/download/v745/rambeaver-quick-start.pdf",
+  "image": "docs/firmware-hub.png"
+}

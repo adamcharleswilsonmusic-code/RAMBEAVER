@@ -1,0 +1,48 @@
+{
+  "revision": 745,
+  "firmware_clean_rebuild_byte_identical": true,
+  "firmware_sha256": "045f7386e5a33efbb1b544d5a3e34aafa4d3a4b33a133312080cbaec4126c79f",
+  "all_79_firmware_files_identical": true,
+  "browser_clean_rebuild_byte_identical": true,
+  "browser_sha256": "758b0ec8fdd6afdbebdcd12e201aee32a294139545505bd2f25c98bcdd57343b",
+  "native_build_passed": true,
+  "native_browser_capture": {
+    "revision": 745,
+    "states": 4,
+    "compression_roundtrips": 32,
+    "bytes": 5016,
+    "native_wasm_pixels_identical": 230400,
+    "corrupt_partial_reordered_duplicate_rejected": true,
+    "no_storage_writes": true,
+    "no_audio_or_simulation": true
+  },
+  "recorder_helpers_compiled": true,
+  "recorder_offline_export": {
+    "actual_frames": 141,
+    "video_tracks": 1,
+    "direct_usb_audio_tracks": 1,
+    "seconds": 4.571666666666666,
+    "source": "Existing short745 validation take; no new device access."
+  },
+  "guide": {
+    "pages": 1,
+    "rendered_and_visually_checked": true,
+    "build_label": 745,
+    "record_stop_export_footer": true
+  },
+  "private_paths_credentials_raw_recordings_scan": "passed",
+  "public_owner_authorization_recorded": true,
+  "device_changed_during_release_preparation": false,
+  "tool_versions": {
+    "python": "3.14.7",
+    "Pillow": "11.3.0",
+    "mido": "1.3.3",
+    "python-rtmidi": "1.5.8",
+    "node": "24.21.0",
+    "emscripten": "4.0.23"
+  },
+  "limits": [
+    "SDK opaque internals not independently audited; retained root license/credit evidence applies.",
+    "Host capture alignment does not calibrate LCD/USB latency."
+  ]
+}

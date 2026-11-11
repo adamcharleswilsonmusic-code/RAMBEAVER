@@ -1,0 +1,33 @@
+{
+  "name": "RAMBEAVER",
+  "revision": 745,
+  "repository": "https://github.com/adamcharleswilsonmusic-code/RAMBEAVER",
+  "prepared_date": "2026-10-17",
+  "public_file_count": 207,
+  "firmware": {
+    "path": "dist/RAMBEAVER-FM-1_745.fwsc",
+    "identity": "FM-1_745",
+    "bytes": 609657,
+    "sha256": "045f7386e5a33efbb1b544d5a3e34aafa4d3a4b33a133312080cbaec4126c79f",
+    "application_bytes": 256756,
+    "ram_data_bss_bytes": 44136,
+    "display_pool_bytes": 288000
+  },
+  "browser": {
+    "path": "dist/browser/omni.wasm",
+    "capture_version": 745,
+    "capture_bytes": 5016,
+    "sha256": "758b0ec8fdd6afdbebdcd12e201aee32a294139545505bd2f25c98bcdd57343b"
+  },
+  "guide": {
+    "path": "docs/rambeaver-quick-start.pdf",
+    "sha256": "2a5438962d329db25a99e26909d40c87c462b83ad9651d7236d0edfe7642adf5",
+    "pages": 1
+  },
+  "source_archive_name": "RAMBEAVER-745-source.zip",
+  "source_archive_hash_location": "release-assets.json in the separate release-assets bundle",
+  "validation": "release/validation.json",
+  "licenses": "THIRD_PARTY_NOTICES.md",
+  "source_inventory": "release/source-inventory.json",
+  "publishing_performed_by_this_staging_task": false
+}

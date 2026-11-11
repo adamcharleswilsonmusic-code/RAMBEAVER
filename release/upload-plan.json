@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/adamcharleswilsonmusic-code/RAMBEAVER",
+  "public_file_count": 207,
+  "maximum_files_per_batch": 100,
+  "top_level_counts": {
+    "(root files)": 16,
+    "LICENSES": 4,
+    "assets": 23,
+    "config": 2,
+    "dist": 13,
+    "docs": 5,
+    "firmware": 79,
+    "host": 2,
+    "music": 6,
+    "provenance": 10,
+    "release": 8,
+    "samples": 1,
+    "tests": 3,
+    "tools": 23,
+    "vendor": 5,
+    "web": 7
+  },
+  "strategy": "Upload each top-level directory separately, preserving its directory name; upload root files as one batch. Every top-level batch is below100 files. Do not upload .git, build, recordings or virtual environments. The full source tree, not only the ZIP, belongs in the repository."
+}

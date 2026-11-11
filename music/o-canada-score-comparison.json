@@ -1,0 +1,163 @@
+{
+  "revision": "FM-1_734",
+  "reference_pdf": "provenance/references/o-canada-official-score.pdf",
+  "reference_sha256": "8ed3c02f320d74c82b188745a3f7c39bf14498984b08d2f5c322480e359b207d",
+  "method": "Direct visual reading of all28 bars from official Canadian Heritage one-page score. Treble clef, F major, quarter=4ticks; half=8,dottedhalf=12,dottedquarter=6,eighth=2,dottedeighth=3,sixteenth=1. Compared independently written pitch-name rows against emitted lead-event MIDI note/duration trace. Audio looping is a separate check.",
+  "bar_note_names_and_tick_durations": [
+    "A4:8 C5:6 C5:2",
+    "F4:12 G4:4",
+    "A4:4 Bb4:4 C5:4 D5:4",
+    "G4:12 R:4",
+    "A4:8 B4:6 B4:2",
+    "C5:12 D5:4",
+    "E5:4 E5:4 D5:4 D5:4",
+    "C5:12 G4:3 A4:1",
+    "Bb4:6 A4:2 G4:4 A4:3 Bb4:1",
+    "C5:6 Bb4:2 A4:4 Bb4:2 C5:2",
+    "D5:4 C5:4 Bb4:4 A4:4",
+    "G4:12 G4:3 A4:1",
+    "Bb4:6 A4:2 G4:4 A4:3 Bb4:1",
+    "C5:6 Bb4:2 A4:4 A4:4",
+    "G4:4 C5:4 C5:2 B4:2 A4:2 B4:2",
+    "C5:8 R:8",
+    "A4:8 C5:6 C5:2",
+    "F4:8 R:8",
+    "Bb4:8 D5:6 D5:2",
+    "G4:8 R:8",
+    "C5:8 C#5:6 C#5:2",
+    "D5:4 Bb4:4 A4:4 G4:4",
+    "F4:8 G4:8",
+    "A4:12 R:4",
+    "C5:8 F5:6 F5:2",
+    "D5:4 Bb4:4 A4:4 G4:4",
+    "C5:8 E4:8",
+    "F4:12 R:4"
+  ],
+  "notes_compared": 83,
+  "all_lead_notes_and_rhythms_match": true,
+  "explicit_accidentals": "B natural in bars5/15; C sharp in bar21. Bb in key signature otherwise.",
+  "cadence_audit": "Bar21 C5\u2192C#5;22 D5 Bb4 A4 G4;23 F4 G4;24 A4;25 C5 F5 F5;26 D5 Bb4 A4 G4;27 C5 E4;28 F4.",
+  "pitch_corrections_from_733": [
+    {
+      "bar": 21,
+      "tick": 320,
+      "old_midi": 74,
+      "corrected_midi": 72,
+      "duration_ticks": 8
+    },
+    {
+      "bar": 22,
+      "tick": 336,
+      "old_midi": 76,
+      "corrected_midi": 74,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 22,
+      "tick": 340,
+      "old_midi": 72,
+      "corrected_midi": 70,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 22,
+      "tick": 344,
+      "old_midi": 70,
+      "corrected_midi": 69,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 22,
+      "tick": 348,
+      "old_midi": 69,
+      "corrected_midi": 67,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 23,
+      "tick": 352,
+      "old_midi": 67,
+      "corrected_midi": 65,
+      "duration_ticks": 8
+    },
+    {
+      "bar": 23,
+      "tick": 360,
+      "old_midi": 69,
+      "corrected_midi": 67,
+      "duration_ticks": 8
+    },
+    {
+      "bar": 24,
+      "tick": 368,
+      "old_midi": 70,
+      "corrected_midi": 69,
+      "duration_ticks": 12
+    },
+    {
+      "bar": 25,
+      "tick": 384,
+      "old_midi": 70,
+      "corrected_midi": 72,
+      "duration_ticks": 8
+    },
+    {
+      "bar": 25,
+      "tick": 392,
+      "old_midi": 74,
+      "corrected_midi": 77,
+      "duration_ticks": 6
+    },
+    {
+      "bar": 25,
+      "tick": 398,
+      "old_midi": 74,
+      "corrected_midi": 77,
+      "duration_ticks": 2
+    },
+    {
+      "bar": 26,
+      "tick": 400,
+      "old_midi": 72,
+      "corrected_midi": 74,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 26,
+      "tick": 404,
+      "old_midi": 69,
+      "corrected_midi": 70,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 26,
+      "tick": 408,
+      "old_midi": 67,
+      "corrected_midi": 69,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 26,
+      "tick": 412,
+      "old_midi": 65,
+      "corrected_midi": 67,
+      "duration_ticks": 4
+    },
+    {
+      "bar": 27,
+      "tick": 416,
+      "old_midi": 70,
+      "corrected_midi": 72,
+      "duration_ticks": 8
+    },
+    {
+      "bar": 27,
+      "tick": 424,
+      "old_midi": 62,
+      "corrected_midi": 64,
+      "duration_ticks": 8
+    }
+  ],
+  "rhythm_corrections": 0,
+  "arrangement": "Original brass-like lead, buoyant bass, chord arpeggios and parade drums. Melody durations unchanged; long notes now sustain.4music+4effects limit retained."
+}

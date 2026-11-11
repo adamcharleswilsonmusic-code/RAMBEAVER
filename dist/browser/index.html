@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- Modified for the local Fart Machine One / Beaver game derivative, 2026-10-13. Upstream origin and notices: LICENSING.md and provenance/source-inventory.json. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Beaver · Zero Waste</title>
+<style>
+:root{color-scheme:dark;--bg:#111723;--panel:#1b2532;--ink:#f8e8c6;--mint:#91dfb8;--muted:#a5b4bb;--coral:#ff917f}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 25% 0,#2b3d3c,transparent 65%),var(--bg);color:var(--ink);font:16px system-ui,sans-serif;min-height:100vh}main{max-width:1080px;margin:auto;padding:36px 28px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--mint);font-size:12px;font-weight:700}h1{font-size:clamp(34px,5vw,62px);line-height:1;letter-spacing:-.05em;margin:14px 0 10px}h1 span{color:var(--coral)}.intro{color:var(--muted);max-width:720px;line-height:1.6;margin-bottom:26px}.layout{display:grid;grid-template-columns:minmax(340px,1fr) 300px;gap:24px}.screen{border:1px solid #42515c;border-radius:18px;background:#0c111b;padding:18px;box-shadow:0 25px 70px #0005}.lcd{position:relative;width:100%;aspect-ratio:1;max-width:600px;margin:auto;background:#13182b;border:3px solid #30404b;border-radius:5px;overflow:hidden}canvas{display:block;width:100%;height:100%;image-rendering:pixelated}.start{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:linear-gradient(#17212bee,#111722ee);text-align:center;padding:20px}.start b{font-size:22px}.start p{color:var(--muted);font-size:14px;line-height:1.5}button{font:inherit;font-weight:650;color:var(--ink);background:#2b3d46;border:1px solid #56686e;border-radius:8px;padding:11px 15px;cursor:pointer;touch-action:none}button:hover{background:#364f54}button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}button.primary{background:var(--mint);color:#10201c;border-color:var(--mint)}button:disabled{opacity:.4;cursor:default}.controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.controls button{flex:1;min-width:60px}.controls .held{background:var(--mint);color:#11221a}.status{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 0 0;min-height:18px}.side{padding:16px 0}.side h2{font-size:18px;letter-spacing:-.02em;margin:0 0 12px}.side p{color:var(--muted);font-size:14px;line-height:1.6}.keyline{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #33434d;font-size:14px}kbd{font:12px ui-monospace,monospace;background:#293841;border:1px solid #4e5d65;border-radius:4px;padding:3px 6px;color:var(--ink)}.note{border-left:3px solid var(--coral);padding-left:13px;margin-top:25px}.hardware{margin-top:27px}.keybed{display:flex;height:65px;gap:2px;margin:14px 0;position:relative}.white{flex:1;background:#e0dbcf;border-radius:0 0 3px 3px}.white.active{background:var(--mint)}.black{position:absolute;top:0;height:37px;width:4%;background:#0b1018;border:1px solid #4b5964;transform:translateX(-50%)}.black.active{background:var(--coral)}footer{margin-top:26px;color:#7f939b;font-size:12px;line-height:1.6}a{color:var(--mint)}@media(max-width:800px){main{padding:24px 15px}.layout{grid-template-columns:1fr}.side{padding:8px 4px}.lcd{max-width:480px}.side p{max-width:520px}}[hidden]{display:none!important}
+</style></head><body><main>
+<div class="eyebrow">FM-1 · expanded playable build</div><h1>Beaver<span>: Zero Waste</span></h1>
+<p class="intro">An ordinary beaver with an unreasonable mission. A city that could use a mess.<br>Explore a much larger outer and inner city, climb through the factory, and shut down the mother robot’s production line.</p>
+<div class="layout"><section class="screen" aria-label="Game preview"><div class="lcd"><canvas id="game" width="240" height="240" aria-label="Beaver game screen"></canvas><div class="start" id="start"><b>Make trouble. Take the city back.</b><p>Robot city. Beaver problem.<br>The same game and synth code as the FM-1 build.<br>A chip arrangement of your uploaded song, at 120 BPM.</p><button class="primary" id="begin">Start game & sound</button><p id="error" role="alert"></p></div></div>
+<div class="controls" aria-label="Hold game controls"><button data-key="0" aria-label="Move left">←</button><button data-key="2" aria-label="Move right">→</button><button data-key="23">Down</button><button data-key="24">Jump</button><button data-key="26">Fire</button><button data-key="22">Posse</button><button data-key="25">Bomb</button><button data-key="1">Door</button></div>
+<div class="controls"><button id="pause" disabled>Pause / Menu</button><button id="save" disabled>Save</button><button id="reload" disabled>Reload save</button><label style="display:flex;align-items:center;gap:8px;font-size:13px">Volume <input id="volume" type="range" min="0" max="4096" value="2200" aria-label="Master volume" style="width:75px"></label></div>
+<div class="controls"><button id="follow">Follow FM-1 · silent</button><button id="stop-follow" hidden>Stop following</button></div><p class="status" id="follow-status" aria-live="polite">Record below to save device video and FM-1 USB audio together.</p>
+<div class="controls" id="menu-controls" hidden><button id="menu-prev">Select ←</button><button id="menu-ok">SEL / Confirm</button><button id="menu-next">Select →</button></div>
+<p class="status" id="status" aria-live="polite">Click Start to enable synthesized sound and play.</p></section>
+<pre id="save-test" hidden aria-label="Save audio diagnostics"></pre><aside class="side"><h2>Make a little mess.</h2>
+<div class="keyline"><span>Move</span><span><kbd>←</kbd> <kbd>→</kbd> / <kbd>A</kbd> <kbd>D</kbd></span></div>
+<div class="keyline"><span>Jump / jetpack thrust · hold</span><span><kbd>Space</kbd> / <kbd>W</kbd></span></div>
+<div class="keyline"><span>Fire · hold to spray</span><span><kbd>X</kbd> / <kbd>J</kbd></span></div>
+<div class="keyline"><span>Enter / exit door</span><kbd>E</kbd></div>
+<div class="keyline"><span>Drop through platform / duck</span><span><kbd>↓</kbd> / <kbd>V</kbd></span></div>
+<div class="keyline"><span>Beaver rush</span><kbd>C</kbd></div>
+<div class="keyline"><span>Firebomb</span><kbd>F</kbd> / <kbd>K</kbd></div>
+<div class="keyline"><span>Pause / menu</span><kbd>Esc</kbd> / <kbd>P</kbd></div>
+<div class="keyline"><span>Save progress</span><kbd>S</kbd></div>
+<p>A filling bar above each robot shows its windup. Jump over its shot; recovery is your opening. Hold Fire to shoot. On solid ground, Down holds a stationary duck and stops gunfire.</p>
+<p class="note">The posse meter refills automatically during play (12 seconds). Press <kbd>C</kbd> when it says READY. The posse dismantles every visible robot except Mother. No eligible robot on screen? Keep the charge.<br><br>Find ready-to-throw firebomb bottles. Each pickup adds one bottle; carry up to three. Press <kbd>F</kbd> to throw one. Bottles remain available when your inventory is full.</p>
+<div class="hardware"><h2>On your FM-1</h2><div class="keybed" id="keybed" aria-label="Physical key layout"></div><p>First two white keys: left and right.<br>Third white key from the right: drop / duck.<br>Last two white keys: jump and fire.<br>First black key: enter / exit doors.<br>Rightmost black key: firebomb.<br>Second black key from the right: posse.<br>Play/Stop: pause menu. SAVE: save.</p></div>
+<p>Menu: turn the Select knob and press SEL to confirm; Play returns. In the browser, use left/right arrows and Enter. Save keeps your current progress. Retry returns to the latest marked checkpoint and ends flawless eligibility. The dam builds continuously during a 22-second defense. After the outer city, chase and smash ten fleeing ground-robot groups and ride two ramps on the short motorbike run. Both ground robots and flying heads explode on bike contact without hurting you. Jumping is optional. E enters side rooms. At the end of the inner city, climb to the rooftop jetpack. Flight moves forward automatically: hold Jump to climb, release to descend, and shoot or dodge the incoming heads. Landing leads through the roof into the data center. Pause shows flawless eligibility. A New Run with no damage or retry and every enemy destroyed, including both side rooms, unlocks Golden Beaver. Jump/Fire confirms the unlock page; release and press again on the party page to start a gold New Run. Pause and save before power-off to keep the unlock. Health logs restore one missing heart; the dam arena has two. Browser saves are separate from device saves.</p>
+</aside></div><footer>RAMBEAVER · build 745. Opening this preview does not install firmware. The 240 × 240 display is enlarged here.<br>Original game art and gameplay. Hardware foundation and ANALOG/NOISE synthesis adapted from <a href="https://github.com/hugelton/Felucca" target="_blank" rel="noreferrer">Felucca</a>, GPL-3.0-only.</footer>
+</main><script type="module">
+import {connectFollow} from './follow.js';
+let following=false,follower=null;
+
+import {bindAudioLifetime} from "./lifecycle.js";
+'use strict';
+const $=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d'),im=ctx.createImageData(240,240);
+const white=[0,2,4,6,7,9,11,12,14,16,18,19,21,23,24,26],black=[1,3,5,8,10,13,15,17,20,22,25];
+for(const k of white){let el=document.createElement('div');el.className='white'+([0,2,23,24,26].includes(k)?' active':'');$('keybed').append(el)}
+for(const k of black){let el=document.createElement('div');el.className='black'+([1,22,25].includes(k)?' active':'');el.style.left=(white.filter(w=>w<k).length/16*100)+'%';$('keybed').append(el)}
+let audio,node,started=false,paused=false,keyboard=new Set(),pointers=new Map(),lastSave='Browser save ready.',buttons=0,storePending;
+const saveTest=new URLSearchParams(location.search).has('save-test');$('save-test').hidden=!saveTest;
+if(saveTest)$('volume').value='0';
+const storageKey=saveTest?'trash-panda-expanded-test':'trash-panda-v2',map={ArrowLeft:0,KeyA:0,ArrowRight:2,KeyD:2,ArrowDown:23,KeyV:23,Space:24,KeyW:24,KeyX:26,KeyJ:26,KeyC:22,KeyE:1,KeyF:25,KeyK:25};
+function send(m){if(node)node.port.postMessage(m)}
+function updateKeys(){let mask=0;for(const code of keyboard)if(map[code]!==undefined)mask|=1<<map[code];for(const k of pointers.values())mask|=1<<k;send({type:'keys',mask});document.querySelectorAll('[data-key]').forEach(el=>el.classList.toggle('held',!!(mask&(1<<+el.dataset.key))))}
+function releaseAll(){keyboard.clear();pointers.clear();updateKeys();buttons=0;send({type:'buttons',mask:0})}
+function pulse(b){send({type:'buttons',mask:1<<b});setTimeout(()=>send({type:'buttons',mask:0}),60)}
+function readStore(){try {const s=JSON.parse(localStorage.getItem(storageKey)||'{}');return Object.fromEntries(Object.entries(s).filter(([k,v])=>['0','1'].includes(k)&&Array.isArray(v)&&v.length<=3840).map(([k,v])=>[k,new Uint8Array(v)]))}catch{lastSave='Could not read browser save.';return {}}}
+function persist(store){try {let s=Object.fromEntries(Object.entries(store).map(([k,v])=>[k,Array.from(v)]));localStorage.setItem(storageKey,JSON.stringify(s));lastSave='Saved in this browser.';storePending=null;send({type:'storageResult',ok:true})}catch{lastSave='Browser storage failed — press Save to retry.';storePending=store;send({type:'storageResult',ok:false})}}
+function onMessage({data:m}){if(following)return;if(m.type==='ready'){started=true;if(!audioLifetime.suspended)$('start').hidden=true;for(const id of ['pause','save','reload'])$(id).disabled=false;$('status').textContent='Playing · '+lastSave;return}
+ if(m.type==='error'){$('error').textContent=m.message;return}if(m.fb){for(let i=0;i<m.fb.length;i++){let p=m.fb[i];p=((p&255)<<8)|(p>>>8);im.data[i*4]=((p>>>11)&31)*255/31;im.data[i*4+1]=((p>>>5)&63)*255/63;im.data[i*4+2]=(p&31)*255/31;im.data[i*4+3]=255}ctx.putImageData(im,0,0)}
+ if(m.audio&&saveTest)$('save-test').textContent='Audio frames: '+m.audio[0]+'\nBeat phase: '+m.audio[1]+'\nTune position: '+m.audio[2]+'\nNotes: '+m.audio[3]+'\nAudio resets: '+m.audio[4]+'\nSave writes: '+(m.writes??'?');
+ if(m.store)persist(m.store);if(m.state){paused=m.state.paused;$('menu-controls').hidden=!paused;$('status').textContent=(m.state.won?'Production stopped':m.state.dead?'Beaver down':paused?'Paused':'Playing')+' · '+lastSave}}
+$('begin').onclick=async()=>{try{if(document.hidden||following)return;if(audio&&audio.state!=='closed'){if(await audioLifetime.resume()){$('start').hidden=true;$('status').textContent='Playing · '+lastSave;}return;}$('begin').disabled=true;audio=new AudioContext({sampleRate:44100});await audio.audioWorklet.addModule('worklet.js');node=new AudioWorkletNode(audio,'omni',{numberOfOutputs:1,outputChannelCount:[2]});node.port.onmessage=onMessage;node.connect(audio.destination);const wasm=await(await fetch('omni.wasm')).arrayBuffer();send({type:'load',wasm,store:readStore(),master:+$('volume').value});if(!audioLifetime.suspended)await audioLifetime.resume()}catch(e){$('error').textContent='Could not start: '+e.message;$('begin').disabled=false}};
+for(const el of document.querySelectorAll('[data-key]')){el.onpointerdown=e=>{if(!started||following)return;e.preventDefault();el.setPointerCapture(e.pointerId);pointers.set(e.pointerId,+el.dataset.key);updateKeys()};el.onpointerup=el.onpointercancel=el.onlostpointercapture=e=>{pointers.delete(e.pointerId);updateKeys()}}
+document.addEventListener('keydown',e=>{if(!started||following||e.target instanceof HTMLInputElement)return;if(paused&&['ArrowLeft','ArrowRight','Enter'].includes(e.code)){e.preventDefault();if(!e.repeat){if(e.code==='Enter')pulse(1);else send({type:'enc',role:0,n:e.code==='ArrowLeft'?-1:1})}}else if(map[e.code]!==undefined){e.preventDefault();keyboard.add(e.code);updateKeys()}else if(!e.repeat&&['Escape','KeyP','KeyS'].includes(e.code)){e.preventDefault();pulse(e.code==='KeyS'?7:10)}});
+document.addEventListener('keyup',e=>{if(map[e.code]!==undefined){keyboard.delete(e.code);updateKeys()}});
+const audioLifetime=bindAudioLifetime({getAudio:()=>audio,getNode:()=>node,onSuspend:()=>{releaseAll();$('start').hidden=false;$('begin').disabled=false;$('begin').textContent='Continue game & sound';$('status').textContent='Sound stopped while the preview is inactive.'},onClose:()=>{releaseAll();started=false;}});
+$('menu-prev').onclick=()=>send({type:'enc',role:0,n:-1});$('menu-next').onclick=()=>send({type:'enc',role:0,n:1});$('menu-ok').onclick=()=>pulse(1);
+$('pause').onclick=()=>pulse(10);$('save').onclick=()=>{if(storePending)persist(storePending);pulse(7)};$('reload').onclick=()=>{releaseAll();send({type:'reboot'})};$('volume').oninput=()=>send({type:'master',value:+$('volume').value});
+
+function followControls(active){
+ following=active;$('follow').disabled=active;$('stop-follow').hidden=!active;
+ for(const el of document.querySelectorAll('[data-key], #pause, #save, #reload, #menu-prev, #menu-next, #menu-ok'))el.disabled=active||!started;
+ $('menu-controls').hidden=true;
+}
+$('follow').onclick=async()=>{
+ releaseAll();followControls(true);$('follow-status').textContent='Connecting…';
+ try{
+  if(audio&&audio.state==='running')await audio.suspend();
+  follower=await connectFollow({
+   onFrame:fb=>{for(let i=0;i<fb.length;i++){let p=fb[i];p=((p&255)<<8)|(p>>>8);im.data[i*4]=((p>>>11)&31)*255/31;im.data[i*4+1]=((p>>>5)&63)*255/63;im.data[i*4+2]=(p&31)*255/31;im.data[i*4+3]=255;}ctx.putImageData(im,0,0);$('start').hidden=true;},
+   onStatus:text=>$('follow-status').textContent=text,
+   onStop:text=>{follower=null;releaseAll();followControls(false);$('follow-status').textContent=text;$('start').hidden=false;$('begin').disabled=false;$('begin').textContent=started?'Continue game & sound':'Start game & sound';}
+  });
+ }catch(e){followControls(false);$('follow-status').textContent=e.message;$('start').hidden=false;$('begin').disabled=false;$('begin').textContent=started?'Continue game & sound':'Start game & sound';}
+};
+$('stop-follow').onclick=()=>follower?.stop();
+window.addEventListener('pagehide',()=>follower?.stop());
+</script><script src="http://127.0.0.1:8766/viewer-controls.js" defer></script>
+</body></html>
