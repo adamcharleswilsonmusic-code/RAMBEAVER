@@ -80,3 +80,5 @@ The source code is **GPL-3.0-only**, built on **Felucca → X0X → FoMni**, wit
 Read [LICENSING.md](LICENSING.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and the [publication checklist](release/PUBLICATION-CHECKLIST.md). Song and character voice recordings supplied by **Adam Wilson**. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for asset provenance and component licenses.
 
 RAMBEAVER is independent software and is not endorsed by M-VAVE, Hügelton Instruments, or the other upstream projects.
+
+You can also try RAMBEAVER in the browser, no flashing needed, in the free community [FM-1 Emulator](https://fm1-emulator.atst.tools/).
